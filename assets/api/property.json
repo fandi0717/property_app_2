@@ -1,0 +1,183 @@
+{
+    "property": [
+        {
+            "id": "881726478123",
+            "name": "Candra Bhirawa",
+            "location": "Lotus, Kavling A1, Blok B No.4",
+            "img": "assets/images/candra-bhirawa.jpg",
+            "deadlines": "2022-11-25 09:00:00",
+            "price": 850000000.0,
+            "property_type": "Komersil",
+            "transaction": [
+                {
+                    "tahap_pemesanan": {
+                        "progress": 100.0,
+                        "menu": {
+                            "booking_fee": 3,
+                            "pesanan_belum_bayar": false,
+                            "riwayat_pemesanan": false
+                        }
+                    }
+                },
+                {
+                    "tahap_administrasi": {
+                        "progress": 50.0,
+                        "menu": {
+                            "tahap_sps": true,
+                            "tahap_spr": false,
+                            "tahap_ppjb": false,
+                            "daftar_dokumen": false,
+                            "tahap_sp3k": false,
+                            "bayar_angsuran": false
+                        }
+                    }
+                },
+                {
+                    "tahap_pembangunan": {
+                        "progress": 0.0,
+                        "menu": {
+                            "tahap_persiapan": 100.0,
+                            "tahap_pondasi_struktur": 20.0,
+                            "tahap_rumah_unfinished": 30.0,
+                            "daftar_finishing_interior": 40.0,
+                            "tahap_pembersihan": 0.0
+                        }
+                    }
+                },
+                {
+                    "tahap_akad_serah_terima": {
+                        "progress": 0.0,
+                        "menu": {
+                            "tahap_akad": true,
+                            "tahap_serah_terima_bangunan": false,
+                            "tahap_serah_terima_legalitas": false,
+                            "daftar_komplain": false
+                        }
+                    }
+                }
+            ],
+            "current_date": "2022-10-10 10:10:00",
+            "fine": null  
+        },
+        
+        {
+            "id": "881726478124",
+            "name": "Bukit Raya Residence",
+            "location": "Jaguar, Kavling A1, Blok D No. 4",
+            "img": "assets/images/bukit-raya-residance.png",
+            "deadlines": "2023-12-25 09:00:00",
+            "price": 985799300.0,
+            "property_type": "Komersil",
+            "transaction": [
+                {
+                    "tahap_pemesanan": {
+                        "progress": 100.0,
+                        "menu": {
+                            "booking_fee": 2,
+                            "pesanan_belum_bayar": false,
+                            "riwayat_pemesanan": false
+                        }
+                    }
+                },
+                {
+                    "tahap_administrasi": {
+                        "progress": 100.0,
+                        "menu": {
+                            "tahap_sps": true,
+                            "tahap_spr": false,
+                            "tahap_ppjb": false,
+                            "daftar_dokumen": false,
+                            "tahap_sp3k": false,
+                            "bayar_angsuran": false
+                        }
+                    }
+                },
+                {
+                    "tahap_pembangunan": {
+                        "progress": 40.0,
+                        "menu": {
+                            "tahap_persiapan": 100.0,
+                            "tahap_pondasi_struktur": 20.0,
+                            "tahap_rumah_unfinished": 30.0,
+                            "daftar_finishing_interior": 40.0,
+                            "tahap_pembersihan": 0.0
+                        }
+                    }
+                },
+                {
+                    "tahap_akad_serah_terima": {
+                        "progress": 0.0,
+                        "menu": {
+                            "tahap_akad": true,
+                            "tahap_serah_terima_bangunan": false,
+                            "tahap_serah_terima_legalitas": false,
+                            "daftar_komplain": false
+                        }
+                    }
+                }
+            ],
+            "current_date": "2024-01-01 09:00:00",
+            "fine": 8550000.0
+        },
+
+        {
+            "id": "881726478125",
+            "name": "Bukit Tinggi",
+            "location": "Kediri, Kavling A1, Blok D No. 4",
+            "img": "assets/images/bukit-tinggi.png",
+            "deadlines": "2024-02-01 09:00:00",
+            "price": 885799300.0,
+            "property_type": "Komersil",
+            "transaction": [
+                {
+                    "tahap_pemesanan": {
+                        "progress": 100.0,
+                        "menu": {
+                            "booking_fee": 1,
+                            "pesanan_belum_bayar": false,
+                            "riwayat_pemesanan": false
+                        }
+                    }
+                },
+                {
+                    "tahap_administrasi": {
+                        "progress": 30.0,
+                        "menu": {
+                            "tahap_sps": true,
+                            "tahap_spr": false,
+                            "tahap_ppjb": false,
+                            "daftar_dokumen": false,
+                            "tahap_sp3k": false,
+                            "bayar_angsuran": false
+                        }
+                    }
+                },
+                {
+                    "tahap_pembangunan": {
+                        "progress": 0.0,
+                        "menu": {
+                            "tahap_persiapan": 100.0,
+                            "tahap_pondasi_struktur": 20.0,
+                            "tahap_rumah_unfinished": 30.0,
+                            "daftar_finishing_interior": 40.0,
+                            "tahap_pembersihan": 0.0
+                        }
+                    }
+                },
+                {
+                    "tahap_akad_serah_terima": {
+                        "progress": 0.0,
+                        "menu": {
+                            "tahap_akad": true,
+                            "tahap_serah_terima_bangunan": false,
+                            "tahap_serah_terima_legalitas": false,
+                            "daftar_komplain": false
+                        }
+                    }
+                }
+            ],
+            "current_date": "2024-04-02 09:00:00",
+            "fine": 9550000.0
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+name: property_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  bloc: ^8.1.4
+  dartz: ^0.10.1
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_screenutil: ^5.9.3
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  clean_architecture_with_state_management: ^1.1.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/api/property.json
