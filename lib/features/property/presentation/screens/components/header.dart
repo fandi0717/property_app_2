@@ -1,11 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:property_app/utils/app_constants.dart';
-import 'package:badges/badges.dart' as badges;
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key});
@@ -19,26 +16,21 @@ class HeaderSection extends StatelessWidget {
     print("60 h : ${60.h}");
     // print("size : ${min(60.w, 60.h)}");
 
-    double avatarSize = min(60.w, 60.h);
-    double containerIconSize = min(35.w, 35.h);
-    double iconNotifSize = min(20.w, 20.h);
-    double containerBadges = min(24.w, 24.h);
-
-    return Container(
+    return SizedBox(
         width: 378.w,
-        // height: 60.h,
+        height: 60.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // avatar and text
-            Container(
+            SizedBox(
               width: 313.5.w,
-              // height: 60.h,
+              height: 60.h,
               child: Row(children: [
                 // avatar
                 Container(
-                  width: avatarSize,
-                  height: avatarSize,
+                  width: 60.r,
+                  height: 60.r,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       // borderRadius: BorderRadius.circular(300.r),
@@ -56,17 +48,17 @@ class HeaderSection extends StatelessWidget {
                 Gap(10.w),
 
                 // text
-                Container(
+                SizedBox(
                   width: 234.w,
-                  // height: 59.h,
+                  height: 59.h,
                   child: Column(
                     // mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // text span
-                      Container(
+                      SizedBox(
                         width: 234.w,
-                        // height: 40.h,
+                        height: 40.h,
                         child: Text.rich(TextSpan(
                             text: 'Temukan',
                             style: TextStyle(
@@ -98,9 +90,9 @@ class HeaderSection extends StatelessWidget {
                       Gap(4.h),
 
                       // text biasa
-                      Container(
+                      SizedBox(
                         width: 234.w,
-                        // height: 15.h,
+                        height: 15.h,
                         child: Text(
                           'Agen Properti Terbaik',
                           style: TextStyle(
@@ -118,7 +110,7 @@ class HeaderSection extends StatelessWidget {
             ),
 
             // icon badge
-            Container(
+            SizedBox(
               width: (378 - 313.5).w,
               height: 60.h,
               child: Stack(
@@ -126,29 +118,28 @@ class HeaderSection extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      width: containerIconSize,
-                      height: containerIconSize,
-                      padding: EdgeInsets.symmetric(
-                          vertical: 4.17.h, horizontal: 4.17.w),
-                      decoration: BoxDecoration(
+                      width: 35.r,
+                      height: 35.r,
+                      padding: EdgeInsets.all(4.17.r),
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
                       ),
                       child: SvgPicture.asset(
                           '${AppConstants.ICON_UTILS}notification.svg',
-                          width: iconNotifSize,
-                          height: iconNotifSize),
+                          width: 20.r,
+                          height: 20.r),
                     ),
                   ),
                   Positioned(
                     right: 5.w,
                     top: 4.h,
                     child: Container(
-                        width: containerBadges,
-                        height: containerBadges,
+                        width: 24.r,
+                        height: 24.r,
                         padding: EdgeInsets.symmetric(
                             vertical: 2.h, horizontal: 4.w),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Colors.red),
                         child: Center(
                           child: Text(

@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:property_app/features/property/presentation/screens/components/header.dart';
 import 'package:property_app/features/property/presentation/widgets/base_screen.dart';
 
@@ -79,6 +78,7 @@ class HomeScreen extends StatelessWidget {
     // context.su();
     return const SafeArea(
       child: Scaffold(
+        backgroundColor: Color.fromRGBO(245, 245, 245, 1),
         body: BaseScreen(
             child: Column(
           children: [HeaderSection()],
