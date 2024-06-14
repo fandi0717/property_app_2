@@ -1,5 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:property_app/features/property/presentation/screens/components/header.dart';
+import 'package:property_app/features/property/presentation/widgets/base_screen.dart';
+
 import '../../../../injection_container.dart';
 import '../bloc/property_bloc.dart';
 
@@ -16,7 +21,7 @@ class _PropertyState extends State<PropertyScreen> {
   void initState() {
     super.initState();
     _bloc = getIt<PropertyBloc>();
-    _bloc.add(LoadPropertyEvent());
+    // _bloc.add(LoadPropertyEvent());
   }
 
   @override
@@ -25,9 +30,7 @@ class _PropertyState extends State<PropertyScreen> {
       create: (context) => _bloc,
       child: BlocBuilder<PropertyBloc, PropertyState>(
         builder: (context, state) {
-          return Scaffold(
-            body: _buildBody(state),
-          );
+          return HomeScreen(state: state, bloc: _bloc);
         },
       ),
     );
@@ -54,7 +57,33 @@ class _PropertyState extends State<PropertyScreen> {
         child: Text('Error: ${state.exception}'),
       );
     } else {
-      return Container();
+      return Container(
+        color: Colors.red,
+      );
     }
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    super.key,
+    required this.state,
+    required this.bloc,
+  });
+
+  final PropertyState state;
+  final PropertyBloc bloc;
+
+  @override
+  Widget build(BuildContext context) {
+    // context.su();
+    return const SafeArea(
+      child: Scaffold(
+        body: BaseScreen(
+            child: Column(
+          children: [HeaderSection()],
+        )),
+      ),
+    );
   }
 }

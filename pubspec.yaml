@@ -7,6 +7,7 @@ environment:
   sdk: '>=3.4.1 <4.0.0'
 
 dependencies:
+  badges: ^3.1.2
   bloc: ^8.1.4
   dartz: ^0.10.1
   equatable: ^2.0.5
@@ -14,6 +15,9 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.6
   flutter_screenutil: ^5.9.3
+  # flutter_screenutil: ^6.0.0-alpha.1
+  flutter_svg: ^2.0.10+1
+  gap: ^3.0.1
   
 
 dev_dependencies:
@@ -26,4 +30,31 @@ flutter:
   uses-material-design: true
 
   assets:
+    # api
     - assets/api/property.json
+
+    # icons
+    - assets/icons/
+    - assets/icons/navbar/svg/
+    - assets/icons/navbar/svg/active/
+    - assets/icons/navbar/svg/nonactive/
+    - assets/icons/utils/svg/
+
+    # images
+    - assets/images/
+
+  fonts:
+    # Outfit
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Regular.ttf
+    
+    # Rubik
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-Regular.ttf
+    
+    # Lexend
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-Regular.ttf
