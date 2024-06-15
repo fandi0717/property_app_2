@@ -98,7 +98,7 @@ class HeaderSection extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
-                              height: 15.12 / 12,
+                              height: 15.12 / 12.sp,
                               fontFamily: AppConstants.OUTFIT,
                               color: const Color.fromRGBO(126, 126, 126, 1)),
                         ),
