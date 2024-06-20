@@ -13,10 +13,12 @@ class PropertyBloc extends Bloc<PropertyEvent, PropertyState> {
   PropertyBloc({required this.propertyUseCase})
       : super(const PropertyInitial()) {
     on<LoadPropertyEvent>(_loadProperty);
+    on<RemovePropertyEvent>(_removeProperty);
+    on<ScrolledSliderPropertyEvent>(_scrolledSlider);
   }
 
   Future<void> _loadProperty(
-    PropertyEvent event,
+    LoadPropertyEvent event,
     Emitter<PropertyState> emit,
   ) async {
     emit(const PropertyLoading());
@@ -25,5 +27,14 @@ class PropertyBloc extends Bloc<PropertyEvent, PropertyState> {
       (exception) => emit(PropertyError(exception)),
       (property) => emit(PropertyLoaded(property)),
     );
+  }
+
+  void _removeProperty(RemovePropertyEvent event, Emitter<PropertyState> emit) {
+    emit(const PropertyInitial());
+  }
+
+  _scrolledSlider(
+      ScrolledSliderPropertyEvent event, Emitter<PropertyState> emit) {
+    emit(PropertyLoaded(event.property, event.index));
   }
 }

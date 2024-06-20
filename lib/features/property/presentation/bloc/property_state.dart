@@ -20,11 +20,12 @@ class PropertyLoading extends PropertyState {
 
 class PropertyLoaded extends PropertyState {
   final PropertyEntity property;
+  final int index;
 
-  const PropertyLoaded(this.property);
+  const PropertyLoaded(this.property, [this.index = 0]);
 
   @override
-  List<Object?> get props => [property];
+  List<Object?> get props => [property, index];
 }
 
 class PropertyError extends PropertyState {

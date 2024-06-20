@@ -11,6 +11,8 @@ dependencies:
   bloc: ^8.1.4
   carousel_slider: ^4.2.1
   dartz: ^0.10.1
+  dots_indicator: ^3.0.0
+  dotted_line: ^3.2.2
   equatable: ^2.0.5
   flutter:
     sdk: flutter
@@ -19,6 +21,8 @@ dependencies:
   # flutter_screenutil: ^6.0.0-alpha.1
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
+  simple_circular_progress_bar: ^1.0.2
+  timelines: ^0.1.0
   
 
 dev_dependencies:
