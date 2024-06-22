@@ -7,11 +7,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:property_app/features/property/domain/entities/property_entity.dart';
 
 import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
 import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
 import 'package:property_app/features/property/presentation/widgets/custom_transaction_menu_widget.dart';
 import 'package:property_app/features/property/presentation/widgets/row_state_property.dart';
+import 'package:timelines/timelines.dart';
 
 import '../../../../../../utils/app_constants.dart';
 
@@ -21,6 +23,21 @@ class EksplorProperti extends StatelessWidget {
     required this.state,
   });
   final PropertyLoaded state;
+
+  double getProgress(Transaction transaction, int index) {
+    switch (index) {
+      case 0:
+        return transaction.tahapPemesanan!.progress!;
+      case 1:
+        return transaction.tahapAdministrasi!.progress!;
+      case 2:
+        return transaction.tahapPembangunan!.progress!;
+      case 3:
+        return transaction.tahapAkadSerahTerima!.progress!;
+      default:
+        return 0.0;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -133,13 +150,107 @@ class EksplorProperti extends StatelessWidget {
             Gap(20.h),
 
             // timelines
-            CustomTextWidget(
-                text: state.property.property[state.index].price.toString()),
+            Container(
+                height: 56.h,
+                decoration: BoxDecoration(
+                    color: const Color.fromRGBO(255, 255, 255, 1),
+                    borderRadius: BorderRadius.circular(10).r),
+                padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 15.w),
+                child: FixedTimeline.tileBuilder(
+                    direction: Axis.horizontal,
+                    builder: TimelineTileBuilder.connected(
+                      nodePositionBuilder: (context, index) => 0,
+                      indicatorPositionBuilder: (context, index) => 0,
+                      itemExtent: 87.w,
+                      itemCount: 4,
+                      connectionDirection: ConnectionDirection.after,
+                      contentsBuilder: (context, index2) {
+                        const Map<int, String> mapping = <int, String>{
+                          0: "Pemesanan",
+                          1: "Administrasi",
+                          2: "Pembangunan",
+                          3: "Serah Terima"
+                        };
+                        double progress = getProgress(
+                            state.property.property[state.index]
+                                .transaction[index2],
+                            index2);
+                        return Container(
+                          margin: EdgeInsets.only(top: 4.h),
+                          alignment: Alignment.centerLeft,
+                          child: CustomTextWidget(
+                              text: mapping.values.toList()[index2],
+                              size: 10,
+                              lineHeight: 12.6,
+                              color: progress > 0.0
+                                  ? const Color.fromRGBO(51, 74, 52, 1)
+                                  : const Color.fromRGBO(171, 171, 171, 1)),
+                        );
+                      },
+                      indicatorBuilder: (context, index2) {
+                        double progress = getProgress(
+                            state.property.property[state.index]
+                                .transaction[index2],
+                            index2);
+
+                        if (progress == 100.0) {
+                          return DotIndicator(
+                            child: SvgPicture.asset(
+                              '${AppConstants.ICON_UTILS}checklist.svg',
+                              width: 15.r,
+                              height: 15.r,
+                            ),
+                          );
+                        } else if (progress == 0.0) {
+                          return DotIndicator(
+                            child: SvgPicture.asset(
+                              '${AppConstants.ICON_UTILS}cd.svg',
+                              width: 15.r,
+                              height: 15.r,
+                            ),
+                          );
+                        }
+                        return DotIndicator(
+                          child: SvgPicture.asset(
+                            '${AppConstants.ICON_UTILS}half_clock.svg',
+                            width: 15.r,
+                            height: 15.r,
+                          ),
+                        );
+                      },
+                      connectorBuilder: (context, index2, type) {
+                        double progress = getProgress(
+                            state.property.property[state.index]
+                                .transaction[index2],
+                            index2);
+
+                        if (progress == 100.0) {
+                          return const SolidLineConnector(
+                            color: Color.fromRGBO(51, 74, 52, 1),
+                          );
+                        }
+                        return const DashedLineConnector(
+                          color: Color.fromRGBO(171, 171, 171, 1),
+                        );
+                      },
+                      lastConnectorBuilder: (context) {
+                        double progress = getProgress(
+                            state.property.property[state.index].transaction[3],
+                            3);
+                        if (progress == 100.0) {
+                          return const SolidLineConnector(
+                            color: Color.fromRGBO(51, 74, 52, 1),
+                          );
+                        }
+                        return const DashedLineConnector(
+                          color: Color.fromRGBO(171, 171, 171, 1),
+                        );
+                      },
+                    ))),
 
             Gap(10.h),
 
             // slider property
-
             CarouselSlider.builder(
               itemCount: state.property.property.length,
               itemBuilder: (BuildContext context, int index, int realIndex) {
