@@ -30,6 +30,7 @@ class EksplorProperti extends StatelessWidget {
           img: "${AppConstants.IMAGES}tahap_pemesanan.png",
           percentage: state.property.property[state.index].transaction[0]
               .tahapPemesanan!.progress!,
+          transaction: state.property.property[state.index].transaction[0],
           backgroundColor: const Color.fromRGBO(51, 74, 52, 1),
           scale: 1,
           leftShadow: 56.w, // or 52.r
@@ -39,6 +40,7 @@ class EksplorProperti extends StatelessWidget {
       CustomTransactionMenuWidget(
           namaTahap: "Tahap Administrasi",
           img: "${AppConstants.IMAGES}tahap_administrasi.png",
+          transaction: state.property.property[state.index].transaction[1],
           percentage: state.property.property[state.index].transaction[1]
               .tahapAdministrasi!.progress!,
           scale: 0.8,
@@ -48,6 +50,7 @@ class EksplorProperti extends StatelessWidget {
       CustomTransactionMenuWidget(
           namaTahap: "Tahap Pembangunan",
           img: "${AppConstants.IMAGES}tahap_pembangunan.png",
+          transaction: state.property.property[state.index].transaction[2],
           percentage: state.property.property[state.index].transaction[2]
               .tahapPembangunan!.progress!,
           scale: 0.8,
@@ -57,6 +60,7 @@ class EksplorProperti extends StatelessWidget {
       CustomTransactionMenuWidget(
           namaTahap: "Tahap Akad & Serah Terima",
           img: "${AppConstants.IMAGES}tahap_akad_serah_terima.png",
+          transaction: state.property.property[state.index].transaction[3],
           percentage: state.property.property[state.index].transaction[3]
               .tahapAkadSerahTerima!.progress!,
           scale: 0.8,

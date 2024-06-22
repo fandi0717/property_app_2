@@ -7,12 +7,16 @@ import 'package:property_app/features/property/presentation/widgets/custom_text_
 import 'package:property_app/utils/app_constants.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
+import '../../domain/entities/property_entity.dart';
+import 'show_bottom_sheet_widget.dart';
+
 class CustomTransactionMenuWidget extends StatefulWidget {
   CustomTransactionMenuWidget(
       {super.key,
       required this.namaTahap,
       required this.img,
       required this.percentage,
+      required this.transaction,
       this.backgroundColor = const Color.fromRGBO(255, 255, 255, 1),
       required this.index,
       this.imgAlign = Alignment.bottomRight,
@@ -46,6 +50,7 @@ class CustomTransactionMenuWidget extends StatefulWidget {
   final double? rightShadow;
   final double? bottomShadow;
   final double? topShadow;
+  final Transaction transaction;
 
   /// [sementara mungkin]
   final int index;
@@ -63,6 +68,7 @@ class _CustomTransactionMenuWidgetState
   void initState() {
     super.initState();
     valueNotifier = ValueNotifier(widget.percentage);
+    // _getProgressPercentage();
   }
 
   @override
@@ -70,6 +76,24 @@ class _CustomTransactionMenuWidgetState
     valueNotifier.dispose();
     super.dispose();
   }
+
+  /*
+  void _getProgressPercentage() {
+    if (widget.transaction.tahapPemesanan != null) {
+      valueNotifier =
+          ValueNotifier(widget.transaction.tahapPemesanan!.progress!);
+    } else if (widget.transaction.tahapAdministrasi != null) {
+      valueNotifier =
+          ValueNotifier(widget.transaction.tahapAdministrasi!.progress!);
+    } else if (widget.transaction.tahapPembangunan != null) {
+      valueNotifier =
+          ValueNotifier(widget.transaction.tahapPembangunan!.progress!);
+    } else if (widget.transaction.tahapAkadSerahTerima != null) {
+      valueNotifier =
+          ValueNotifier(widget.transaction.tahapAkadSerahTerima!.progress!);
+    }
+  }
+  */
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +107,21 @@ class _CustomTransactionMenuWidgetState
 
     return GestureDetector(
         onTap: () {
-          print(widget.index.toString());
+          switch (widget.index) {
+            case 0:
+              showBottomSheetWidget(context, widget.index,
+                  tahapPemesanan: widget.transaction.tahapPemesanan);
+            case 1:
+              showBottomSheetWidget(context, widget.index,
+                  tahapAdministrasi: widget.transaction.tahapAdministrasi);
+            case 2:
+              showBottomSheetWidget(context, widget.index,
+                  tahapPembangunan: widget.transaction.tahapPembangunan);
+            case 3:
+              showBottomSheetWidget(context, widget.index,
+                  tahapAkadSerahTerima:
+                      widget.transaction.tahapAkadSerahTerima);
+          }
         },
         // behavior: HitTestBehavior.translucent,
         child: Opacity(
@@ -319,34 +357,5 @@ class _CustomTransactionMenuWidgetState
                 ],
               )),
         ));
-  }
-}
-
-class OvalWithRoundedCornersPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.blue
-      ..style = PaintingStyle.fill;
-
-    final path = Path()
-      ..moveTo(0, size.height * 0.5)
-      ..quadraticBezierTo(size.width * 0.5, 0, size.width, size.height * 0.5)
-      ..quadraticBezierTo(size.width * 0.5, size.height, 0, size.height * 0.5);
-
-    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
-    final rrect = RRect.fromRectAndCorners(
-      rect,
-      topRight: const Radius.circular(13),
-      bottomRight: const Radius.circular(13),
-    );
-
-    canvas.clipRRect(rrect);
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
   }
 }

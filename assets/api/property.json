@@ -97,10 +97,10 @@
                         "progress": 40.0,
                         "menu": {
                             "tahap_persiapan": 100.0,
-                            "tahap_pondasi_struktur": 20.0,
-                            "tahap_rumah_unfinished": 30.0,
-                            "daftar_finishing_interior": 40.0,
-                            "tahap_pembersihan": 0.0
+                            "tahap_pondasi_struktur": 30.0,
+                            "tahap_rumah_unfinished": 40.0,
+                            "daftar_finishing_interior": 50.0,
+                            "tahap_pembersihan": 10.0
                         }
                     }
                 },
@@ -157,10 +157,10 @@
                         "progress": 0.0,
                         "menu": {
                             "tahap_persiapan": 100.0,
-                            "tahap_pondasi_struktur": 20.0,
-                            "tahap_rumah_unfinished": 30.0,
-                            "daftar_finishing_interior": 40.0,
-                            "tahap_pembersihan": 0.0
+                            "tahap_pondasi_struktur": 40.0,
+                            "tahap_rumah_unfinished": 60.0,
+                            "daftar_finishing_interior": 70.0,
+                            "tahap_pembersihan": 80.0
                         }
                     }
                 },
