@@ -6,7 +6,6 @@ import 'package:gap/gap.dart';
 import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
 
 import 'package:property_app/utils/app_constants.dart';
-import 'package:property_app/utils/functions.dart';
 
 class RowStatePropertyWidget extends StatelessWidget {
   RowStatePropertyWidget({
@@ -22,7 +21,7 @@ class RowStatePropertyWidget extends StatelessWidget {
   }
   final String? icon;
   final String? text;
-  final double? price;
+  final String? price;
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +72,8 @@ class RowStatePropertyWidget extends StatelessWidget {
                     lineHeight: 17.64,
                   ),
                   CustomTextWidget(
-                    text: convertToIntIfPossible(price!).toString(),
+                    // text: convertToIntIfPossible(price!).toString(),
+                    text: price ?? "",
                     weight: FontWeight.w700,
                     size: 14,
                     lineHeight: 17.64,

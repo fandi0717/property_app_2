@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:property_app/core/functions/indonesia.dart';
 import 'package:property_app/features/property/domain/entities/property_entity.dart';
 
 import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
@@ -318,14 +319,14 @@ class EksplorProperti extends StatelessWidget {
                               ),
                               Gap(7.h),
                               RowStatePropertyWidget(
-                                icon: 'calendar.svg',
-                                text: state.property.property[index].deadlines
-                                    .toString(),
-                              ),
+                                  icon: 'calendar.svg',
+                                  text: formatDateTime(state
+                                      .property.property[index].deadlines!)),
                               Gap(7.h),
                               RowStatePropertyWidget(
-                                price: state.property.property[index].price,
-                              ),
+                                  // price: state.property.property[index].price,
+                                  price: formatRupiah(
+                                      state.property.property[index].price!)),
                             ],
                           )
                         ],
@@ -355,8 +356,8 @@ class EksplorProperti extends StatelessWidget {
                                     Gap(5.w),
                                     const CustomTextWidget(text: 'Denda Rp '),
                                     CustomTextWidget(
-                                      text: state.property.property[index].fine!
-                                          .toString(),
+                                      text: formatRupiah(
+                                          state.property.property[index].fine!),
                                       weight: FontWeight.w700,
                                     ),
                                   ],
@@ -385,11 +386,13 @@ class EksplorProperti extends StatelessWidget {
                                             BlendMode.srcIn),
                                       ),
                                       Gap(3.w),
-                                      const CustomTextWidget(
-                                        text: 'Terlambat 7 Hari',
+                                      CustomTextWidget(
+                                        text:
+                                            'Terlambat ${state.property.property[index].currentDate!.difference(state.property.property[index].deadlines!).inDays} hari',
                                         size: 10,
                                         lineHeight: 12.6,
-                                        color: Color.fromRGBO(255, 255, 255, 1),
+                                        color: const Color.fromRGBO(
+                                            255, 255, 255, 1),
                                       )
                                     ],
                                   ),
