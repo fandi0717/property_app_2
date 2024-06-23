@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
+
+import '../bloc/property_bloc.dart';
 
 class GapScreen extends StatelessWidget {
   const GapScreen({super.key});

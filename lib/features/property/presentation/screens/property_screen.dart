@@ -1,17 +1,16 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:property_app/core/bottom_navbar/widget/bottom_navbar_widget.dart';
 
-import 'package:property_app/features/property/presentation/screens/section/ads.dart';
-import 'package:property_app/features/property/presentation/screens/section/body.dart';
-import 'package:property_app/features/property/presentation/screens/section/header.dart';
-import 'package:property_app/features/property/presentation/widgets/base_screen.dart';
-import 'package:property_app/features/property/presentation/widgets/gap_screen.dart';
-
+import '../../../../core/bottom_navbar/widget/bottom_navbar_widget.dart';
 import '../../../../injection_container.dart';
 import '../../../../utils/app_constants.dart';
 import '../bloc/property_bloc.dart';
+import '../widgets/base_screen.dart';
+import '../widgets/gap_screen.dart';
+import 'section/ads.dart';
+import 'section/body.dart';
+import 'section/header.dart';
 
 class PropertyScreen extends StatefulWidget {
   const PropertyScreen({super.key});

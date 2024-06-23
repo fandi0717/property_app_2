@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/utils/app_constants.dart';
 
+import '../../../../../utils/app_constants.dart';
 import '../../widgets/custom_text_widget.dart';
 
 class HeaderSection extends StatelessWidget {

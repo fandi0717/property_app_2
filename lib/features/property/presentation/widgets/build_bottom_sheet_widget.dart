@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-
-import 'package:property_app/features/property/domain/entities/property_entity.dart';
-import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
-import 'package:property_app/utils/app_constants.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
+
+import '../../../../utils/app_constants.dart';
+import '../../domain/entities/property_entity.dart';
+import 'custom_text_widget.dart';
 
 class BuildBottomSheetWidget {
   Widget getTahapPemesanan(TahapPemesananMenu menu) {

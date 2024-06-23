@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:property_app/core/bottom_navbar/widget/bottom_navbar_widget.dart';
+import '../../../../core/bottom_navbar/widget/bottom_navbar_widget.dart';
 import '../../../../injection_container.dart';
 import '../../../property/presentation/widgets/custom_text_widget.dart';
 import '../bloc/document_bloc.dart';

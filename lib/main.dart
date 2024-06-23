@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:property_app/core/bottom_navbar/cubit/bottom_navbar_cubit.dart';
-import 'package:property_app/route/app_route.dart';
 
+import 'core/bottom_navbar/cubit/bottom_navbar_cubit.dart';
 import 'injection_container.dart';
+import 'route/app_route.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

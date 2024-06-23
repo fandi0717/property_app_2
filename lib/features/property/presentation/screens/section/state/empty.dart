@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
-import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
 
 import '../../../../../../utils/app_constants.dart';
+import '../../../bloc/property_bloc.dart';
+import '../../../widgets/custom_text_widget.dart';
 
 class EmptyProperty extends StatelessWidget {
   const EmptyProperty({super.key});

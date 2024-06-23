@@ -12,13 +12,12 @@ injectProperty() {
 
   // Repository
   getIt.registerLazySingleton<PropertyRepository>(
-          () => PropertyRepositoryImpl(remoteDataSource: getIt()));
+      () => PropertyRepositoryImpl(remoteDataSource: getIt()));
 
   // UseCases
   getIt.registerLazySingleton(() => PropertyUseCase(getIt()));
 
   // DataSources
   getIt.registerLazySingleton<PropertyRemoteDataSource>(
-          () => PropertyRemoteDataSourceImpl());
+      () => PropertyRemoteDataSourceImpl());
 }
-      

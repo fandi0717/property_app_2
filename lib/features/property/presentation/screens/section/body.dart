@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
-import 'package:property_app/features/property/presentation/screens/section/state/eksplor.dart';
-import 'package:property_app/features/property/presentation/screens/section/state/empty.dart';
+
+import '../../bloc/property_bloc.dart';
+import 'state/eksplor.dart';
+import 'state/empty.dart';
 
 class BodySection extends StatelessWidget {
   const BodySection({super.key});

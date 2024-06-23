@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:property_app/features/property/presentation/widgets/slider_ads_widget.dart';
 
 import '../../../../../utils/app_constants.dart';
+import '../../widgets/slider_ads_widget.dart';
 
 class AdsSection extends StatelessWidget {
   const AdsSection({super.key});

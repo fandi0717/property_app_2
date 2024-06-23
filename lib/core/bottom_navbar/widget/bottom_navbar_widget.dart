@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/route/page_name.dart';
+import '../../../route/page_name.dart';
 
 import '../../../utils/app_constants.dart';
 import '../cubit/bottom_navbar_cubit.dart';

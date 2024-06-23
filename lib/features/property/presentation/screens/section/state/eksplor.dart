@@ -1,22 +1,21 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:dotted_line/dotted_line.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:property_app/core/functions/indonesia.dart';
-import 'package:property_app/features/property/domain/entities/property_entity.dart';
-
-import 'package:property_app/features/property/presentation/bloc/property_bloc.dart';
-import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
-import 'package:property_app/features/property/presentation/widgets/custom_transaction_menu_widget.dart';
-import 'package:property_app/features/property/presentation/widgets/row_state_property.dart';
 import 'package:timelines/timelines.dart';
 
+import '../../../../../../core/functions/indonesia.dart';
 import '../../../../../../utils/app_constants.dart';
+import '../../../../domain/entities/property_entity.dart';
+import '../../../bloc/property_bloc.dart';
+import '../../../widgets/custom_text_widget.dart';
+import '../../../widgets/custom_transaction_menu_widget.dart';
+import '../../../widgets/row_state_property.dart';
 
 class EksplorProperti extends StatelessWidget {
   const EksplorProperti({
