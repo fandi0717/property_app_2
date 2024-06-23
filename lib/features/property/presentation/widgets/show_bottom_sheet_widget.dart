@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:property_app/features/property/domain/entities/property_entity.dart';
 import 'package:property_app/features/property/presentation/widgets/build_bottom_sheet_widget.dart';
 
+import '../../../../utils/app_constants.dart';
+
 void showBottomSheetWidget(BuildContext context, int index,
     {TahapPemesanan? tahapPemesanan,
     TahapAdministrasi? tahapAdministrasi,
@@ -11,7 +13,7 @@ void showBottomSheetWidget(BuildContext context, int index,
   showModalBottomSheet(
     context: context,
     showDragHandle: true,
-    backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+    backgroundColor: AppConstants.WHITE,
     builder: (context) {
       switch (index) {
         case 0:

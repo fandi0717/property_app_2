@@ -11,7 +11,7 @@ class CustomTextWidget extends StatelessWidget {
     this.size = 12,
     this.lineHeight = 15.12,
     this.weight = FontWeight.w400,
-    this.color = const Color.fromRGBO(51, 74, 52, 1),
+    this.color = AppConstants.DARK_OLIVE_GREEN,
   });
 
   /// `text` : [required]

@@ -17,7 +17,7 @@ class CustomTransactionMenuWidget extends StatefulWidget {
       required this.img,
       required this.percentage,
       required this.transaction,
-      this.backgroundColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.backgroundColor = AppConstants.WHITE,
       required this.index,
       this.imgAlign = Alignment.bottomRight,
       this.scale,
@@ -135,41 +135,41 @@ class _CustomTransactionMenuWidgetState
                           BoxShadow(
                               offset: Offset(0, 4.12.h),
                               blurRadius: 2.47.r,
-                              color: const Color.fromRGBO(63, 63, 63, 0.05)),
+                              color: AppConstants.SEMI_TRANSPARENT_DARK_GRAY),
                           BoxShadow(
                               offset: Offset(0, 10.42.h),
                               blurRadius: 6.25.r,
-                              color: const Color.fromRGBO(63, 63, 63, 0.08)),
+                              color: AppConstants.SEMI_TRANSPARENT_DARK_GRAY_2),
                           BoxShadow(
                               offset: Offset(0, 21.27.h),
                               blurRadius: 12.76.r,
-                              color: const Color.fromRGBO(63, 63, 63, 0.09)),
+                              color: AppConstants.SEMI_TRANSPARENT_DARK_GRAY_3),
                           BoxShadow(
                               offset: Offset(0, 43.8.h),
                               blurRadius: 26.28.r,
-                              color: const Color.fromRGBO(63, 63, 63, 0.12)),
+                              color: AppConstants.SEMI_TRANSPARENT_DARK_GRAY_4),
                           BoxShadow(
                               offset: Offset(0, 120.h),
                               blurRadius: 72.r,
-                              color: const Color.fromRGBO(63, 63, 63, 0.17)),
+                              color: AppConstants.SEMI_TRANSPARENT_DARK_GRAY_5),
                         ]
                       : isTahapAdministrasi
                           ? [
                               BoxShadow(
                                   offset: Offset(0, 14.1.h),
                                   blurRadius: 5.32.r,
-                                  color: const Color.fromRGBO(
-                                      170, 167, 167, 0.06)),
+                                  color: AppConstants
+                                      .SEMI_TRANSPARENT_DARK_GRAY_6),
                               BoxShadow(
                                   offset: Offset(0, 47.35.h),
                                   blurRadius: 17.87.r,
-                                  color: const Color.fromRGBO(
-                                      170, 167, 167, 0.08)),
+                                  color: AppConstants
+                                      .SEMI_TRANSPARENT_DARK_GRAY_7),
                               BoxShadow(
                                   offset: Offset(0, 212.h),
                                   blurRadius: 80.r,
-                                  color: const Color.fromRGBO(
-                                      170, 167, 167, 0.14)),
+                                  color: AppConstants
+                                      .SEMI_TRANSPARENT_DARK_GRAY_8),
                             ]
                           : null),
               child: Stack(
@@ -192,8 +192,7 @@ class _CustomTransactionMenuWidgetState
                                     child: Container(
                                         width: 198,
                                         height: 219,
-                                        color: const Color.fromRGBO(
-                                            47, 69, 48, 1)),
+                                        color: AppConstants.DARK_GREEN),
                                   ))
                             ],
                           ),
@@ -214,8 +213,7 @@ class _CustomTransactionMenuWidgetState
                                   child: Container(
                                       width: 296,
                                       height: 296,
-                                      color: const Color.fromRGBO(
-                                          248, 248, 248, 1)),
+                                      color: AppConstants.PURE_WHITE),
                                 ),
                               )
                             ],
@@ -238,8 +236,8 @@ class _CustomTransactionMenuWidgetState
                               weight: FontWeight.w300,
                               lineHeight: 15,
                               color: isTahapPemesanan
-                                  ? const Color.fromRGBO(255, 255, 255, 1)
-                                  : const Color.fromRGBO(51, 74, 52, 1),
+                                  ? AppConstants.WHITE
+                                  : AppConstants.DARK_OLIVE_GREEN,
                             ),
                             Gap(isTahapPemesanan ? 5.h : 1.h),
                             CustomTextWidget(
@@ -249,8 +247,8 @@ class _CustomTransactionMenuWidgetState
                               size: 14,
                               lineHeight: 17.5,
                               color: isTahapPemesanan
-                                  ? const Color.fromRGBO(255, 255, 255, 1)
-                                  : const Color.fromRGBO(51, 74, 52, 1),
+                                  ? AppConstants.WHITE
+                                  : AppConstants.DARK_OLIVE_GREEN,
                             ),
                           ],
                         ),
@@ -277,21 +275,19 @@ class _CustomTransactionMenuWidgetState
                                               const BoxShadow(
                                                   blurRadius: 2.5,
                                                   spreadRadius: 0,
-                                                  color: Color.fromRGBO(
-                                                      9, 19, 10, 0.63),
-                                                  // color: Colors.amber,
+                                                  color: AppConstants
+                                                      .SEMI_TRANSPARENT_DARK_GREEN_2,
                                                   offset: Offset(0, 5))
                                             ]),
                                   child: SimpleCircularProgressBar(
                                     backStrokeWidth: 3,
                                     progressStrokeWidth: 3,
                                     progressColors: isTahapPemesanan
-                                        ? [const Color.fromRGBO(255, 92, 92, 1)]
-                                        : [const Color.fromRGBO(51, 74, 52, 1)],
+                                        ? [AppConstants.SALMON_PINK]
+                                        : [AppConstants.DARK_OLIVE_GREEN],
                                     backColor: isTahapPemesanan
-                                        ? const Color.fromRGBO(255, 255, 255, 1)
-                                        : const Color.fromRGBO(
-                                            226, 233, 226, 1),
+                                        ? AppConstants.WHITE
+                                        : AppConstants.SOFT_GREEN,
                                     mergeMode: true,
                                     onGetText: (double value) {
                                       return Text.rich(TextSpan(
@@ -302,10 +298,9 @@ class _CustomTransactionMenuWidgetState
                                               height: 14.22 / 12,
                                               fontSize: 12.sp,
                                               color: isTahapPemesanan
-                                                  ? const Color.fromRGBO(
-                                                      255, 255, 255, 1)
-                                                  : const Color.fromRGBO(
-                                                      51, 74, 52, 1)),
+                                                  ? AppConstants.WHITE
+                                                  : AppConstants
+                                                      .DARK_OLIVE_GREEN),
                                           children: [
                                             TextSpan(
                                               text: '%',
@@ -316,10 +311,9 @@ class _CustomTransactionMenuWidgetState
                                                   height: 5.93 / 5,
                                                   fontSize: 5.sp,
                                                   color: isTahapPemesanan
-                                                      ? const Color.fromRGBO(
-                                                          255, 255, 255, 1)
-                                                      : const Color.fromRGBO(
-                                                          51, 74, 52, 1)),
+                                                      ? AppConstants.WHITE
+                                                      : AppConstants
+                                                          .DARK_OLIVE_GREEN),
                                             ),
                                           ]));
                                     },

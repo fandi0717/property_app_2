@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:property_app/features/property/presentation/widgets/custom_text_widget.dart';
 import 'package:property_app/utils/functions.dart';
 
 import '../../../../utils/app_constants.dart';
@@ -11,8 +12,8 @@ class SliderAdsWidget extends StatelessWidget {
   const SliderAdsWidget({
     super.key,
     required this.index,
-    this.backgroundColor = const Color.fromRGBO(51, 74, 52, 1),
-    this.textColor = const Color.fromRGBO(255, 255, 255, 1),
+    this.backgroundColor = AppConstants.DARK_OLIVE_GREEN,
+    this.textColor = AppConstants.WHITE,
     this.content = const {
       "diskon": 20.0,
       "nameProperty": "American House",
@@ -39,7 +40,11 @@ class SliderAdsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("slider ads tap on index : $index");
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: CustomTextWidget(
+          text:
+              "You tapped ads in index $index with name ${content["nameProperty"]}",
+        )));
       },
       child: Container(
           // width: 358.w,
@@ -52,7 +57,6 @@ class SliderAdsWidget extends StatelessWidget {
             children: [
               // text
               Padding(
-                // padding: EdgeInsets.all(30.r),
                 padding: const EdgeInsets.only(left: 30, top: 30, bottom: 30).r,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -87,14 +91,12 @@ class SliderAdsWidget extends StatelessWidget {
                           ]),
                     ),
                     Gap(7.h),
-                    Text(
-                      content["nameProperty"],
-                      style: TextStyle(
-                          fontFamily: AppConstants.OUTFIT,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20.sp,
-                          height: 25.2 / 20,
-                          color: textColor),
+                    CustomTextWidget(
+                      text: content["nameProperty"],
+                      weight: FontWeight.w500,
+                      size: 20,
+                      lineHeight: 25.2,
+                      color: textColor,
                     ),
                     Gap(4.h),
                     Row(
@@ -105,14 +107,12 @@ class SliderAdsWidget extends StatelessWidget {
                           height: 12.r,
                         ),
                         Gap(5.w),
-                        Text(
-                          content["periode"],
-                          style: TextStyle(
-                              fontFamily: AppConstants.OUTFIT,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 10.sp,
-                              height: 12.6 / 10,
-                              color: textColor),
+                        CustomTextWidget(
+                          text: content["periode"],
+                          weight: FontWeight.w300,
+                          size: 10,
+                          lineHeight: 12.6,
+                          color: textColor,
                         )
                       ],
                     )

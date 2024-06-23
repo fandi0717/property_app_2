@@ -37,7 +37,7 @@ class RowStatePropertyWidget extends StatelessWidget {
                         fontFamily: AppConstants.OUTFIT,
                         fontWeight: FontWeight.w400,
                         fontSize: 12.sp,
-                        color: const Color.fromRGBO(51, 74, 52, 1),
+                        color: const AppConstants.DARK_OLIVE_GREEN,
                         height: 15.12 / 12),
                     children: [
                       TextSpan(
@@ -87,7 +87,7 @@ class RowStatePropertyWidget extends StatelessWidget {
                 width: 14.r,
                 height: 14.r,
                 colorFilter: const ColorFilter.mode(
-                    Color.fromRGBO(51, 74, 52, 1), BlendMode.srcIn),
+                    AppConstants.DARK_OLIVE_GREEN, BlendMode.srcIn),
               ),
               Gap(5.w),
               CustomTextWidget(text: text ?? ""),

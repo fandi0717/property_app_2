@@ -28,7 +28,7 @@ class EmptyProperty extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: CustomTextWidget(
               text: 'Daftar pesanan terbaru anda',
-              color: Color.fromRGBO(158, 158, 158, 1),
+              color: AppConstants.SILVER,
             )),
         Gap(60.h),
         Expanded(
@@ -40,38 +40,28 @@ class EmptyProperty extends StatelessWidget {
           ),
         ),
         Gap(20.h),
-        Text(
-          'Pesanan Kosong',
-          style: TextStyle(
-              fontFamily: AppConstants.OUTFIT,
-              fontWeight: FontWeight.w600,
-              fontSize: 16.sp,
-              height: 20.16 / 16,
-              color: const Color.fromRGBO(51, 74, 52, 1)),
+        const CustomTextWidget(
+          text: 'Pesanan Kosong',
+          weight: FontWeight.w600,
+          size: 16,
+          lineHeight: 20.16,
         ),
         Gap(4.h),
-        Text(
-          'Ayo tambahkan pesanan baru',
-          style: TextStyle(
-              fontFamily: AppConstants.OUTFIT,
-              fontWeight: FontWeight.w400,
-              fontSize: 12.sp,
-              height: 15.12 / 12,
-              color: const Color.fromRGBO(155, 155, 155, 1)),
+        const CustomTextWidget(
+          text: 'Ayo tambahkan pesanan baru',
+          color: AppConstants.MEDIUM_GRAY,
         ),
         Gap(10.h),
         ElevatedButton.icon(
           onPressed: () {
             context.read<PropertyBloc>().add(LoadPropertyEvent());
           },
-          label: Text(
-            'Eksplor Properti',
-            style: TextStyle(
-                fontFamily: AppConstants.OUTFIT,
-                fontWeight: FontWeight.w500,
-                fontSize: 16.sp,
-                height: 20.16 / 16,
-                color: const Color.fromRGBO(255, 255, 255, 1)),
+          label: const CustomTextWidget(
+            text: 'Eksplor Properti',
+            weight: FontWeight.w500,
+            size: 16,
+            lineHeight: 20.16,
+            color: AppConstants.WHITE,
           ),
           icon: SvgPicture.asset(
             '${AppConstants.ICON_UTILS}search.svg',
@@ -82,38 +72,11 @@ class EmptyProperty extends StatelessWidget {
             minimumSize: WidgetStatePropertyAll(Size(196.w, 50.h)),
             // fixedSize: WidgetStatePropertyAll(Size(196.w, 50.h)),
             backgroundColor:
-                const WidgetStatePropertyAll(Color.fromRGBO(51, 74, 52, 1)),
+                const WidgetStatePropertyAll(AppConstants.DARK_OLIVE_GREEN),
             padding: WidgetStatePropertyAll(
                 EdgeInsets.symmetric(vertical: 15.h, horizontal: 25.w)),
           ),
         ),
-        // Container(
-        //   width: 196.w,
-        //   height: 50.h,
-        //   decoration: BoxDecoration(
-        //       borderRadius: BorderRadius.circular(39).r,
-        //       color: const Color.fromRGBO(51, 74, 52, 1)),
-        //   padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25).r,
-        //   child: Row(
-        //     children: [
-        //       SvgPicture.asset(
-        //         '${AppConstants.ICON_UTILS}search.svg',
-        //         width: 20.r,
-        //         height: 20.r,
-        //       ),
-        //       Gap(10.w),
-        //       Text(
-        //         'Eksplor Properti',
-        //         style: TextStyle(
-        //             fontFamily: AppConstants.OUTFIT,
-        //             fontWeight: FontWeight.w500,
-        //             fontSize: 16.sp,
-        //             height: 20.16 / 16,
-        //             color: const Color.fromRGBO(255, 255, 255, 1)),
-        //       )
-        //     ],
-        //   ),
-        // )
       ],
     );
   }

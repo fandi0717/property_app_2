@@ -40,6 +40,13 @@ class EksplorProperti extends StatelessWidget {
     }
   }
 
+  final Map<int, String> mapping = const <int, String>{
+    0: "Pemesanan",
+    1: "Administrasi",
+    2: "Pembangunan",
+    3: "Serah Terima"
+  };
+
   @override
   Widget build(BuildContext context) {
     var listTahapan = <Widget>[
@@ -49,7 +56,7 @@ class EksplorProperti extends StatelessWidget {
           percentage: state.property.property[state.index].transaction[0]
               .tahapPemesanan!.progress!,
           transaction: state.property.property[state.index].transaction[0],
-          backgroundColor: const Color.fromRGBO(51, 74, 52, 1),
+          backgroundColor: AppConstants.DARK_OLIVE_GREEN,
           scale: 1,
           leftShadow: 56.w, // or 52.r
           bottomShadow: -37.h, // or -16.r
@@ -88,16 +95,6 @@ class EksplorProperti extends StatelessWidget {
           index: 3)
     ];
 
-    print("${MediaQuery.sizeOf(context).height}");
-    print("${MediaQuery.sizeOf(context).width}");
-    print('cara chatgpt : ${(144 / 1140 * 926).h}');
-    print('cara biasa : ${144.h}');
-    print('378.w : ${378.w}');
-    print('144.h : ${144.w}');
-    print('378.r : ${378.r}');
-    print('144.r : ${144.r}');
-    print('378.w / 144.h : ${378.w / 144.h}');
-    print('378.r / 144.r : ${378.r / 144.r}');
     return Column(
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -105,26 +102,18 @@ class EksplorProperti extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Pesanan Terbaru',
-                  style: TextStyle(
-                      fontFamily: AppConstants.OUTFIT,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18.sp,
-                      height: 22.68 / 18,
-                      color: const Color.fromRGBO(51, 74, 52, 1)),
+                CustomTextWidget(
+                  text: 'Pesanan Terbaru',
+                  weight: FontWeight.w500,
+                  size: 18,
+                  lineHeight: 22.68,
                 ),
-                Text(
-                  'Daftar pesanan terbaru anda',
-                  style: TextStyle(
-                      fontFamily: AppConstants.OUTFIT,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12.sp,
-                      height: 15.12 / 12,
-                      color: const Color.fromRGBO(158, 158, 158, 1)),
+                CustomTextWidget(
+                  text: 'Daftar pesanan terbaru anda',
+                  color: AppConstants.SILVER,
                 ),
               ],
             ),
@@ -138,7 +127,7 @@ class EksplorProperti extends StatelessWidget {
                 width: 24.r,
                 height: 24.r,
                 colorFilter: const ColorFilter.mode(
-                    Color.fromRGBO(51, 74, 52, 1), BlendMode.srcIn),
+                    AppConstants.DARK_OLIVE_GREEN, BlendMode.srcIn),
               ),
             )
           ],
@@ -154,7 +143,7 @@ class EksplorProperti extends StatelessWidget {
             Container(
                 height: 56.h,
                 decoration: BoxDecoration(
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                    color: AppConstants.WHITE,
                     borderRadius: BorderRadius.circular(10).r),
                 padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 15.w),
                 child: FixedTimeline.tileBuilder(
@@ -166,12 +155,6 @@ class EksplorProperti extends StatelessWidget {
                       itemCount: 4,
                       connectionDirection: ConnectionDirection.after,
                       contentsBuilder: (context, index2) {
-                        const Map<int, String> mapping = <int, String>{
-                          0: "Pemesanan",
-                          1: "Administrasi",
-                          2: "Pembangunan",
-                          3: "Serah Terima"
-                        };
                         double progress = getProgress(
                             state.property.property[state.index]
                                 .transaction[index2],
@@ -184,8 +167,8 @@ class EksplorProperti extends StatelessWidget {
                               size: 10,
                               lineHeight: 12.6,
                               color: progress > 0.0
-                                  ? const Color.fromRGBO(51, 74, 52, 1)
-                                  : const Color.fromRGBO(171, 171, 171, 1)),
+                                  ? AppConstants.DARK_OLIVE_GREEN
+                                  : AppConstants.SILVER_2),
                         );
                       },
                       indicatorBuilder: (context, index2) {
@@ -227,11 +210,11 @@ class EksplorProperti extends StatelessWidget {
 
                         if (progress == 100.0) {
                           return const SolidLineConnector(
-                            color: Color.fromRGBO(51, 74, 52, 1),
+                            color: AppConstants.DARK_OLIVE_GREEN,
                           );
                         }
                         return const DashedLineConnector(
-                          color: Color.fromRGBO(171, 171, 171, 1),
+                          color: AppConstants.SILVER_2,
                         );
                       },
                       lastConnectorBuilder: (context) {
@@ -240,11 +223,11 @@ class EksplorProperti extends StatelessWidget {
                             3);
                         if (progress == 100.0) {
                           return const SolidLineConnector(
-                            color: Color.fromRGBO(51, 74, 52, 1),
+                            color: AppConstants.DARK_OLIVE_GREEN,
                           );
                         }
                         return const DashedLineConnector(
-                          color: Color.fromRGBO(171, 171, 171, 1),
+                          color: AppConstants.SILVER_2,
                         );
                       },
                     ))),
@@ -258,11 +241,11 @@ class EksplorProperti extends StatelessWidget {
                 return Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12).r,
-                      color: Colors.white),
+                      color: AppConstants.WHITE),
                   padding: const EdgeInsets.all(15).r,
                   child: Column(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 348.w,
                         height: 19.h,
                         child: Row(
@@ -276,13 +259,13 @@ class EksplorProperti extends StatelessWidget {
                               // height: 19.h,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25).r,
-                                  color: const Color.fromRGBO(154, 202, 62, 1)),
+                                  color: AppConstants.LIME_GREEN),
                               padding: EdgeInsets.symmetric(
                                   vertical: 2.h, horizontal: 8.w),
                               child: const Center(
                                 child: CustomTextWidget(
                                   text: 'Komersil',
-                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  color: AppConstants.WHITE,
                                 ),
                               ),
                             )
@@ -337,7 +320,7 @@ class EksplorProperti extends StatelessWidget {
                           children: [
                             Gap(10.h),
                             const DottedLine(
-                              dashColor: Color.fromRGBO(171, 171, 171, 1),
+                              dashColor: AppConstants.SILVER_2,
                             ),
                             Gap(10.h),
                             Row(
@@ -351,7 +334,7 @@ class EksplorProperti extends StatelessWidget {
                                         width: 14.r,
                                         height: 14.r,
                                         colorFilter: const ColorFilter.mode(
-                                            Color.fromRGBO(51, 74, 52, 1),
+                                            AppConstants.DARK_OLIVE_GREEN,
                                             BlendMode.srcIn)),
                                     Gap(5.w),
                                     const CustomTextWidget(text: 'Denda Rp '),
@@ -368,8 +351,7 @@ class EksplorProperti extends StatelessWidget {
                                   // height: 21.h,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(25).r,
-                                      color:
-                                          const Color.fromRGBO(51, 74, 52, 1)),
+                                      color: AppConstants.DARK_OLIVE_GREEN),
                                   padding: EdgeInsets.only(
                                       top: 4.h,
                                       right: 9.w,
@@ -382,7 +364,7 @@ class EksplorProperti extends StatelessWidget {
                                         width: 10.r,
                                         height: 10.r,
                                         colorFilter: const ColorFilter.mode(
-                                            Color.fromRGBO(255, 255, 255, 1),
+                                            AppConstants.WHITE,
                                             BlendMode.srcIn),
                                       ),
                                       Gap(3.w),
@@ -391,8 +373,7 @@ class EksplorProperti extends StatelessWidget {
                                             'Terlambat ${state.property.property[index].currentDate!.difference(state.property.property[index].deadlines!).inDays} hari',
                                         size: 10,
                                         lineHeight: 12.6,
-                                        color: const Color.fromRGBO(
-                                            255, 255, 255, 1),
+                                        color: AppConstants.WHITE,
                                       )
                                     ],
                                   ),
@@ -434,19 +415,15 @@ class EksplorProperti extends StatelessWidget {
               dotsCount: state.property.property.length,
               position: state.index,
               decorator: DotsDecorator(
-                  // color: const Color.fromRGBO(222, 221, 221, 1), // inactice color
-                  // activeColor: const Color.fromRGBO(51, 74, 52, 1),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15).r,
-                      side: const BorderSide(
-                          color: Color.fromRGBO(222, 221, 221, 1))),
+                      side: const BorderSide(color: AppConstants.LIGHT_GRAY_2)),
                   size: Size(15.w, 3.r),
-                  // size: Size(15.w, 10.r),
                   activeSize: Size(19.w, 3.r),
                   activeShape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15).r,
                       side: const BorderSide(
-                          color: Color.fromRGBO(51, 74, 52, 1))),
+                          color: AppConstants.DARK_OLIVE_GREEN)),
                   spacing: EdgeInsets.only(right: 4.w)),
             ),
 
@@ -468,7 +445,7 @@ class EksplorProperti extends StatelessWidget {
                     ),
                     CustomTextWidget(
                       text: 'Daftar menu transaksi',
-                      color: Color.fromRGBO(155, 155, 155, 1),
+                      color: AppConstants.MEDIUM_GRAY,
                     )
                   ],
                 ),
@@ -478,7 +455,7 @@ class EksplorProperti extends StatelessWidget {
                   width: 24.r,
                   height: 24.r,
                   colorFilter: const ColorFilter.mode(
-                      Color.fromRGBO(51, 74, 52, 1), BlendMode.srcIn),
+                      AppConstants.DARK_OLIVE_GREEN, BlendMode.srcIn),
                 )
               ],
             ),
@@ -495,15 +472,9 @@ class EksplorProperti extends StatelessWidget {
                   mainAxisSpacing: 20.h,
                   childAspectRatio: 181.5 / 174),
               itemBuilder: (context, index) {
-                // make a widget customTransactionMenu
-                // print(
-                //     "listTahapan ke - 2 : ${(listTahapan[1] as CustomTransactionMenuWidget).percentage}");
                 return listTahapan[index];
               },
             )
-
-            // head menu transaction
-            // menu transaction using grid
           ],
         ))),
       ],

@@ -23,7 +23,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: Center(
                 child: CustomTextWidget(
@@ -31,7 +31,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: const Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -60,7 +60,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -68,7 +68,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -82,7 +82,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -90,7 +90,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -104,7 +104,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -112,7 +112,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -126,7 +126,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -134,7 +134,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -148,7 +148,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -156,7 +156,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -170,7 +170,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -178,7 +178,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -230,7 +230,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -238,7 +238,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -252,7 +252,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -260,7 +260,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -274,7 +274,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -282,7 +282,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -297,7 +297,7 @@ class BuildBottomSheetWidget {
               padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color.fromRGBO(255, 92, 92, 1),
+                color: AppConstants.SALMON_PINK,
               ),
               child: const Center(
                 child: CustomTextWidget(
@@ -305,7 +305,7 @@ class BuildBottomSheetWidget {
                   weight: FontWeight.w500,
                   size: 10.67,
                   lineHeight: 13.44,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: AppConstants.WHITE,
                 ),
               ),
             ),
@@ -333,12 +333,12 @@ class CustomContainerIconWidget extends StatelessWidget {
       height: 35.r,
       decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: const Color.fromRGBO(51, 74, 52, 1),
+          color: AppConstants.DARK_OLIVE_GREEN,
           boxShadow: [
             BoxShadow(
                 offset: Offset(0, 6.25.h),
                 blurRadius: 4.58.r,
-                color: const Color.fromRGBO(234, 230, 230, 0.73)),
+                color: AppConstants.SEMI_TRANSPARENT_LIGHT_GRAY),
           ]),
       child: Center(
         child: SvgPicture.asset("${AppConstants.ICON_UTILS}$imgName.svg",
@@ -360,21 +360,20 @@ class CircularProgressPembangunan extends StatelessWidget {
         height: 35.r,
         decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Color.fromRGBO(51, 74, 52, 1),
+            color: AppConstants.DARK_OLIVE_GREEN,
             boxShadow: [
               BoxShadow(
                   blurRadius: 2.5,
                   spreadRadius: 0,
-                  color: Color.fromRGBO(9, 19, 10, 0.16),
-                  // color: Colors.amber,
+                  color: AppConstants.SEMI_TRANSPARENT_DARK_GREEN,
                   offset: Offset(0, 5))
             ]),
         child: SimpleCircularProgressBar(
           valueNotifier: ValueNotifier(progress),
           backStrokeWidth: 3,
           progressStrokeWidth: 3,
-          progressColors: const [Color.fromRGBO(255, 92, 92, 1)],
-          backColor: const Color.fromRGBO(255, 255, 255, 1),
+          progressColors: const [AppConstants.SALMON_PINK],
+          backColor: AppConstants.WHITE,
           mergeMode: true,
           onGetText: (double value) {
             return Text.rich(TextSpan(
@@ -384,7 +383,7 @@ class CircularProgressPembangunan extends StatelessWidget {
                     fontFamily: AppConstants.RUBIK,
                     height: 14.22 / 12,
                     fontSize: 12.sp,
-                    color: const Color.fromRGBO(255, 255, 255, 1)),
+                    color: AppConstants.WHITE),
                 children: [
                   TextSpan(
                     text: '%',
@@ -393,7 +392,7 @@ class CircularProgressPembangunan extends StatelessWidget {
                         fontFamily: AppConstants.RUBIK,
                         height: 5.93 / 5,
                         fontSize: 5.sp,
-                        color: const Color.fromRGBO(255, 255, 255, 1)),
+                        color: AppConstants.WHITE),
                   ),
                 ]));
           },
@@ -429,11 +428,10 @@ class ContentBottomSheetWidget extends StatelessWidget {
         CustomTextWidget(
             text: title, weight: FontWeight.w500, size: 18, lineHeight: 22.68),
         CustomTextWidget(
-            text: descriptionTitle,
-            color: const Color.fromRGBO(155, 155, 155, 1)),
+            text: descriptionTitle, color: AppConstants.MEDIUM_GRAY),
         Gap(20.h),
         Divider(
-          color: const Color.fromRGBO(222, 221, 221, 1),
+          color: AppConstants.LIGHT_GRAY_2,
           thickness: 3.h,
         ),
         // Gap(20.h),
@@ -470,8 +468,7 @@ class ContentBottomSheetWidget extends StatelessWidget {
                                 child: Container(
                                     width: 198,
                                     height: 219,
-                                    color:
-                                        const Color.fromRGBO(248, 248, 248, 1)),
+                                    color: AppConstants.VERY_LIGHT_GRAY),
                               ),
                             ),
                           ],
@@ -497,7 +494,7 @@ class ContentBottomSheetWidget extends StatelessWidget {
                                       child: builder.values.toList()[index]
                                               ["icon"] ??
                                           const Placeholder(
-                                            color: Colors.red,
+                                            color: AppConstants.SALMON_PINK,
                                           )),
                                   Visibility(
                                     visible: builder.values.toList()[index]

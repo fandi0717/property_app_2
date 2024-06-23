@@ -24,8 +24,7 @@ class PropertyModel extends PropertyEntity {
   //           currentDate: currentDate,
   //           fine: fine);
 
-  const PropertyModel({required List<Property> property})
-      : super(property: property);
+  const PropertyModel({required super.property});
 
   // PropertyModel copyWith({
   //   String? id,

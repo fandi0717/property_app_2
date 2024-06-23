@@ -10,14 +10,7 @@ class BodySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("50.spMin : ${50.spMin}");
-    print("50.h : ${50.h}");
-    print("50.r : ${50.r}");
-    print("berapa sp 18 : ${18.sp}");
-    print("berapa height 22.68 / 18 : ${22.68 / 18}");
-    print("berapa height 22.68 / 18.sp : ${22.68 / 18.sp}");
-    print("berapa height 22.68.sp / 18.sp : ${22.68.sp / 18.sp}");
-    return Container(
+    return SizedBox(
       width: 378.w,
       // height: 571.h,
       child: BlocBuilder<PropertyBloc, PropertyState>(
@@ -25,7 +18,7 @@ class BodySection extends StatelessWidget {
           if (state is PropertyLoaded) {
             return EksplorProperti(state: state);
           }
-          return EmptyProperty();
+          return const EmptyProperty();
         },
       ),
     );

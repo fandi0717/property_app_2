@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:property_app/features/property/presentation/widgets/slider_ads_widget.dart';
 
+import '../../../../../utils/app_constants.dart';
+
 class AdsSection extends StatelessWidget {
   const AdsSection({super.key});
 
@@ -14,8 +16,8 @@ class AdsSection extends StatelessWidget {
           return SliderAdsWidget(
             index: index,
             backgroundColor: index.isOdd
-                ? const Color.fromRGBO(154, 202, 62, 1)
-                : const Color.fromRGBO(51, 74, 52, 1),
+                ? AppConstants.LIME_GREEN
+                : AppConstants.DARK_OLIVE_GREEN,
           );
         },
         options: CarouselOptions(
